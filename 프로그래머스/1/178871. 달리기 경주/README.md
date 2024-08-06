@@ -1,3 +1,7 @@
+# 풀이 핵심 포인트
+
+해당 인덱스를 가져오는데 O(n)의 시간이 걸린다면 딕셔너리를 사용해보자
+
 # [level 1] 달리기 경주 - 178871 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/178871) 
