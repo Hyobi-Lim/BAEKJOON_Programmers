@@ -1,0 +1,20 @@
+-- 코드를 작성해주세요
+SELECT A.EMP_NO, EMP_NAME, 
+        CASE
+            WHEN AVGSCORE>=96 THEN 'S'
+            WHEN AVGSCORE>=90 THEN 'A'
+            WHEN AVGSCORE>=80 THEN 'B'
+            ELSE 'C'
+        END GRADE, 
+        CASE
+            WHEN AVGSCORE>=96 THEN SAL*0.2
+            WHEN AVGSCORE>=90 THEN SAL*0.15
+            WHEN AVGSCORE>=80 THEN SAL*0.1
+            ELSE 0
+        END BONUS
+FROM HR_EMPLOYEES A
+JOIN (SELECT EMP_NO, AVG(SCORE) AVGSCORE
+      FROM HR_GRADE
+      GROUP BY EMP_NO
+     ) B ON A.EMP_NO=B.EMP_NO
+ORDER BY EMP_NO;
