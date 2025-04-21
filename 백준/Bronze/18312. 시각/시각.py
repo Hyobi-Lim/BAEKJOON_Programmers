@@ -6,7 +6,7 @@ for a in range(n+1):
     for b in range(60):
         for c in range(60):
             if k=='0':
-                if a<10 or b<10 or c<10 or k in str(a) or k in str(b) or k in str(c):
+                if a<10 or b<10 or c<10:
                     answer+=1
                     continue
             if k in str(a) or k in str(b) or k in str(c):
