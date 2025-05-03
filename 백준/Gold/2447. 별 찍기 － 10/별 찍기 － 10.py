@@ -1,5 +1,5 @@
-global answer
-num=int(input())
+import sys
+num=int(sys.stdin.readline())
 answer=[[' ']*num for _ in range(num)]
 def fii_start(num,start_row,starl_col):
     global answer
