@@ -13,9 +13,6 @@ for i in range(14):
         junhyun_money-=(junhyun_money//arr[i]*arr[i])
     if i==0 or arr[i]==arr[i-1]:
         continue
-    elif arr[i]==arr[i-1]:
-        stock_increase=0
-        stock_decrease=0
     elif arr[i]>arr[i-1]:
         if stock_decrease!=0:
             stock_increase=1
